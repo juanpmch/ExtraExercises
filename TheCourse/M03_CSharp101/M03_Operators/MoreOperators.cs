@@ -5,55 +5,56 @@ public class MoreOperators
     // 1. Easy: subtraction
     public int Subtract(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        return a - b;
     }
 
     // 2. Easy: multiplication
     public int Multiply(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        return a * b;
     }
 
     // 3. Easy: is the number odd?
     public bool IsOdd(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x % 2 != 0;
     }
 
     // 4. Easy: is the number positive (strictly greater than zero)?
     public bool IsPositive(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x > 0;
     }
 
     // 5. Easy: is the number zero?
     public bool IsZero(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x == 0;
     }
 
     // 6. Medium: is the number divisible by both 3 and 5?
     public bool IsDivisibleByThreeAndFive(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x % 3 == 0 && x % 5 == 0;
     }
 
     // 7. Medium: is the value within the inclusive range [min, max]?
     public bool IsBetweenInclusive(int value, int min, int max)
     {
-        throw new NotImplementedException(); // TODO
+        return value >= min && value <= max;
     }
 
     // 8. Medium: returns true if exactly one of the two booleans is true (XOR)
     public bool ExactlyOneIsTrue(bool left, bool right)
     {
-        throw new NotImplementedException(); // TODO
+        return left == true && right == false || left == false && right == true;
+        //podria escribirse tb return left && !right || !left && right;
     }
 
     // 9. Medium: returns the largest of two numbers
     public int Max(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        return a > b ? a : b;
     }
 
     // 10. Medium: returns the smallest of two numbers

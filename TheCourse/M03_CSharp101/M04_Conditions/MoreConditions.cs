@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace TheCourse.M03_CSharp101.Exercises.M04_Conditions;
 
 public class MoreConditions
@@ -5,66 +7,125 @@ public class MoreConditions
     // 1. Easy: returns true if the number is negative
     public bool IsNegative(int number)
     {
-        throw new NotImplementedException(); // TODO
+        return number < 0;
     }
 
     // 2. Easy: returns "Yes" if the person is a senior (65 or older), otherwise "No"
     public string IsSenior(int age)
     {
-        throw new NotImplementedException(); // TODO
+        if (age >= 65)
+        {
+            return "Yes";
+        }
+        else
+        {
+            return "No";
+        }
     }
 
     // 3. Easy: returns true if the password has at least 8 characters
     public bool IsPasswordLongEnough(string password)
     {
-        throw new NotImplementedException(); // TODO
+
+        return password.Length >= 8;
     }
 
     // 4. Easy: returns the day type based on a switch ("zaterdag" or "zondag" => "weekend", anything else => "weekdag")
     public string GetDayType(string day)
     {
-        throw new NotImplementedException(); // TODO
+        switch (day)
+        {
+            case "zaterdag":
+                return "weekend";
+
+            case "zondag":
+                return "weekend";
+
+            default:
+                return "weekdag";
+        }
     }
 
     // 5. Medium: returns true if a person may drive
     // (at least 18 years old AND has a license)
     public bool MayDrive(int age, bool hasLicense)
     {
-        throw new NotImplementedException(); // TODO
+        return age >= 18 && hasLicense == true;
+
+
     }
 
     // 6. Medium: returns the ticket price based on age
     // under 12: 5, 12 to 64 (inclusive): 10, 65 and older: 7
     public int TicketPrice(int age)
     {
-        throw new NotImplementedException(); // TODO
+        if (age < 12)
+            return 5;
+
+        else if (age >= 65)
+            return 7;
+
+        else
+            return 10;
     }
 
     // 7. Medium: returns true if a number is within the range 1 to 100 (inclusive)
     public bool IsValidPercentage(int value)
     {
-        throw new NotImplementedException(); // TODO
+        return value >= 1 && value <= 100;
     }
 
     // 8. Medium: returns the BMI category
     // bmi < 18.5: "Ondergewicht", 18.5 to 24.9: "Normaal", 25 to 29.9: "Overgewicht", 30 or higher: "Obesitas"
     public string BmiCategory(double bmi)
     {
-        throw new NotImplementedException(); // TODO
+        if (bmi < 18.5)
+            return "Ondergewicht";
+
+        else if (bmi >= 18.5 && bmi <= 24.9)
+            return "Normaal";
+
+        else if (bmi >= 25 && bmi <= 29.9)
+            return "Overgewicht";
+
+        else
+            return "Obesitas";
     }
 
     // 9. Medium: returns true if the login is successful
     // (username equals "admin" AND password equals "1234")
     public bool IsLoginSuccessful(string username, string password)
     {
-        throw new NotImplementedException(); // TODO
+        return username == "admin" && password == "1234";
     }
 
     // 10. Medium: returns the season based on the month number (1-12)
     // 12, 1, 2: "Winter", 3, 4, 5: "Lente", 6, 7, 8: "Zomer", 9, 10, 11: "Herfst"
     public string GetSeason(int month)
     {
-        throw new NotImplementedException(); // TODO
+        switch (month)
+        {
+            case 12:
+            case 1:
+            case 2:
+
+                return "Winter";
+
+            case 3:
+            case 4:
+            case 5:
+                return "Lente";
+
+            case 6 or 7 or 8:
+
+                return "Zomer";
+
+            case 9 or 10 or 11:
+                return "Herfst";
+
+            default:
+                return "Onbekend";
+        }
     }
 
     // 11. Hard: returns the membership fee
